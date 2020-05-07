@@ -1,0 +1,37 @@
+<kt-header></kt-header>
+<div class="wrapper">
+	<form [formGroup]="onboardForm" (ngSubmit)="onBoard(onboardForm)">
+		<h1>Onboarding</h1>
+		<div class="para">
+			<p>Thank you. Please complete your setup</p>
+			<p>this will help you save timeby using our customised test</p>
+		</div>
+		<div class="flex">
+			<div class="select">
+				<select formControlName="select1">
+					<option value="" disabled>What industry are you in ?</option>
+					<option value="sales">sales</option>
+					<option value="manager">manager</option>
+				</select>
+			</div>
+			<div class="select">
+				<select formControlName="select2">
+					<option value="" disabled>I am a -</option>
+					<option value="sales">sales</option>
+					<option value="manager">manager</option>
+				</select>
+			</div>
+			<div class="select">
+				<select formControlName="select3">
+					<option value="" disabled>I typically hire for -</option>
+					<option value="sales">sales</option>
+					<option value="manager">manager</option>
+				</select>
+			</div>
+		</div>
+		<div class="btn">
+			<button class="btn-1">Next</button>
+			<button class="btn-2" (click)="later()">i'll do it later</button>
+		</div>
+	</form>
+</div>

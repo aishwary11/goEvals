@@ -1,0 +1,91 @@
+<kt-header></kt-header>
+<div class="wrapper">
+	<form [formGroup]="signupForm" (ngSubmit)="onSignUp(signupForm)">
+		<h1>SignUp</h1>
+		<div class="flex">
+			<div class="container">
+				<div class="form-control">
+					<label>Full Name<span style="font-weight: 900;color: #e85969;">*</span></label>
+					<div class="input-container">
+						<img src="../../../../../assets/media/logos/name.png">
+						<input type="text" placeholder="Name" formControlName="name">
+					</div>
+				</div>
+				<div class="error" *ngIf="signupForm.controls.name.touched">
+					<p *ngIf="signupForm.controls.name.invalid">Invalid Name</p>
+				</div>
+				<div class="form-control">
+					<label>Email Address<span style="font-weight: 900;color: #e85969;">*</span></label>
+					<div class="input-container">
+						<img src="../../../../../assets/media/logos/mail.png">
+						<input type="email" placeholder="Email" formControlName="email">
+					</div>
+				</div>
+				<div class="error" *ngIf="signupForm.controls.email.touched">
+					<p *ngIf="signupForm.controls.email.invalid">Invalid Email</p>
+				</div>
+				<div class="form-control">
+					<label>Password<span style="font-weight: 900;color: #e85969;">*</span></label>
+					<div class="input-container">
+						<img src="../../../../../assets/media/logos/key.png">
+						<input type="password" placeholder="Password" formControlName="password">
+					</div>
+				</div>
+				<div class="error" *ngIf="signupForm.controls.password.touched">
+					<p *ngIf="signupForm.controls.password.invalid">Invalid Password</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="form-control">
+					<label>Company Name<span style="font-weight: 900;color: #e85969;">*</span></label>
+					<div class="input-container">
+						<img src="../../../../../assets/media/logos/company.png">
+						<input type="text" placeholder="Name" formControlName="company_name">
+					</div>
+				</div>
+				<div class="error" *ngIf="signupForm.controls.company_name.touched">
+					<p *ngIf="signupForm.controls.company_name.invalid">Invalid Company Name</p>
+				</div>
+				<div class="form-control">
+					<label>Mobile Number<span style="font-weight: 900;color: #e85969;">*</span></label>
+					<div class="mobile-container">
+						<div class="select">
+							<select formControlName="select">
+								<option value="" disabled>Code</option>
+							</select>
+						</div>
+						<div class="input-container-mobile">
+							<input type="text" placeholder="Mobile Number" formControlName="number">
+						</div>
+					</div>
+				</div>
+				<div class="error" *ngIf="signupForm.controls.number.touched">
+					<p *ngIf="signupForm.controls.number.invalid">Invalid Number</p>
+				</div>
+				<div class="form-control">
+					<label>Confirm Password<span style="font-weight: 900;color: #e85969;">*</span></label>
+					<div class="input-container">
+						<img src="../../../../../assets/media/logos/key.png">
+						<input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+					</div>
+				</div>
+				<div class="error" *ngIf="signupForm.controls.confirmPassword.touched">
+					<p *ngIf="signupForm.controls.confirmPassword.value !=signupForm.controls.password.value">Password doesn't match</p>
+				</div>
+			</div>
+		</div>
+		<div class="center">
+			<div class="custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input" id="customCheck1" formControlName="check">
+				<label class="custom-control-label" style="font-weight: 500;" for="customCheck1">By continuing you agree to the <span style="color: #fd2e50; font-weight: 600;cursor: default;">Terms And Condition</span></label>
+			</div>
+			<button class="sign-btn" type="submit">Submit</button>
+			<p>Or Sign up with</p>
+			<div class="footer-btn">
+				<button class="google" style="margin-right: 3px;" (click)="google()"><img src="../../../../../assets/media/logos/google.png"></button>
+				<button class="linkedin" style="margin-left: 3px;"><img src="../../../../../assets/media/logos/linkedin.png"></button>
+			</div>
+			<p>Already have an account ? <a class="sign-up" (click)="signIn()">Sign In</a></p>
+		</div>
+	</form>
+</div>

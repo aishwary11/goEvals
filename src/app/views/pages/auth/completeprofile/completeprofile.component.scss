@@ -1,0 +1,243 @@
+$base-color:#f8f8f8;
+$font-color:#161c2d;
+$form-color:#fff;
+$warning:#e85969;
+$button-warning:#fd0e35;
+$border:#eaeaea;
+$disabled:#588da8;
+$light-font:#b8bfc6;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	position: relative;
+	background-color: $base-color;
+	width: 100%;
+	height: 90vh;
+
+	form {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 450px;
+		box-shadow: 0.5px 1px #eaeaea;
+		padding: 30px 20px;
+		background-color: $form-color;
+		border: 2px solid $border;
+		color: $font-color;
+		border-radius: 5px;
+
+		h1 {
+			text-align: center;
+			font-size: 25px;
+			font-weight: 700;
+			font-family: 'Roboto';
+		}
+
+		.form-control {
+			border: none;
+			margin-top: 20px;
+			height: 70px;
+
+			input {
+				border: none;
+				font-family: 'Poppins';
+
+				&::placeholder {
+					color: $light-font;
+				}
+			}
+
+			label {
+				font-weight: 500;
+				font-size: 14px;
+				color: #545965;
+				font-family: 'Poppins';
+			}
+
+			.input-container {
+				height: 42px;
+				border: 1px solid $border;
+				border-radius: 5px;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 5px;
+
+				img {
+					width: 14px;
+				}
+
+				input {
+					width: 85%;
+					margin-left: 15px;
+
+					outline: none;
+
+					&::placeholder {
+						color: $light-font;
+					}
+				}
+			}
+
+			.mobile-container {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.select {
+					height: 42px;
+					border: 1px solid $border;
+					border-radius: 5px;
+					width: 17%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-top: 5px;
+					position: relative;
+
+					select {
+						border: none;
+						outline: none;
+						appearance: none;
+						position: absolute;
+						right: 20px;
+						color: $light-font;
+					}
+
+					&::after {
+						content: url('../../../../../assets/media/logos/droper.png');
+						position: absolute;
+						right: 7px;
+						top: 10px;
+
+					}
+				}
+
+				.input-container-mobile {
+					height: 42px;
+					border: 1px solid $border;
+					border-radius: 5px;
+					width: 80%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-top: 5px;
+
+					input {
+						outline: none;
+						width: 85%;
+						background-color: $form-color;
+						font-family: 'Poppins';
+					}
+				}
+			}
+		}
+
+		.container {
+			margin-top: 5px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 13px;
+
+			.checkbox {
+				position: relative;
+
+				input[type="checkbox"] {
+					position: absolute;
+					top: 3px;
+				}
+
+				label {
+					font-weight: 500;
+					margin-left: 20px;
+				}
+			}
+
+			p {
+				font-weight: 500;
+				margin: 0;
+				font-family: 'Poppins';
+			}
+		}
+
+		.sign-btn {
+			background-color: $button-warning;
+			width: 100%;
+			color: $form-color;
+			font-weight: 500;
+			border: none;
+			border-radius: 6px;
+			box-shadow: 0.5px 1px #eaeaea;
+			padding: 10px 0;
+			font-size: 15px;
+			font-family: 'Poppins';
+			margin-bottom: 15px;
+		}
+
+		.footer {
+			p {
+				text-align: center;
+				font-weight: 500;
+				font-family: 'Poppins';
+
+			}
+		}
+
+		.custom-control-input:checked~.custom-control-label {
+			&:before {
+				color: $form-color;
+				border-color: $button-warning;
+				background-color: $button-warning;
+			}
+		}
+
+		.custom-checkbox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 25px 0 15px 0;
+			font-size: 13px;
+			font-weight: 500;
+
+			span {
+				font-weight: 600;
+				color: $button-warning;
+			}
+		}
+
+		.custom-control-input:focus~.custom-control-label::before,
+		.form-control:focus {
+			box-shadow: none;
+			border-color: $border;
+		}
+
+		.custom-control-label {
+			cursor: pointer;
+
+			&:before,
+			&:after {
+				top: 2px;
+			}
+		}
+
+		.custom-switch .custom-control-label {
+			&:after {
+				top: 4px;
+			}
+		}
+
+	}
+}
+
+.disabled {
+	background-color: $disabled !important;
+}

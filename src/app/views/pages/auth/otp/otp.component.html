@@ -1,0 +1,24 @@
+<kt-header></kt-header>
+<div class="wrapper">
+	<form [formGroup]="otpForm" (ngSubmit)="onOtp(otpForm)">
+		<p>You're almost there</p>
+		<h1>Verify your number to get started</h1>
+		<p style="font-size: 16px;">OTP has been sent to your mobile number</p>
+		<p style="font-size: 16px;">and register email ID.</p>
+		<div class="flex">
+			<div class="flex-item">
+				<input type="text" formControlName="input_1" maxlength="1">
+				<input type="text" formControlName="input_2" maxlength="1">
+				<input type="text" formControlName="input_3" maxlength="1">
+				<input type="text" formControlName="input_4" maxlength="1">
+			</div>
+			<button type="submit" [disabled]="otpForm.invalid">Verify</button>
+
+		</div>
+		<p class="footer-para">I didn't recieve the mail ! <span>Resend OTP</span></p>
+	</form>
+</div>
+
+
+
+<!-- [class.disabled]="otpForm.invalid" -->

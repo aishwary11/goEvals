@@ -1,0 +1,47 @@
+<kt-header></kt-header>
+<div class="wrapper">
+	<form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+		<h1>Login</h1>
+		<div class="form-control">
+			<label>Your Email<span style="font-weight: 900;color: #e85969;">*</span></label>
+			<div class="input-container">
+				<img src="../../../../../assets/media/logos/name.png">
+				<input type="text" placeholder="Email" formControlName="email">
+			</div>
+		</div>
+		<div class="error" *ngIf="loginForm.controls.email.touched">
+			<p *ngIf="loginForm.controls.email.invalid">Invalid Email</p>
+		</div>
+		<div class="form-control">
+			<label>Password<span style="font-weight: 900;color: #e85969;">*</span></label>
+			<div class=" input-container">
+				<img src="../../../../../assets/media/logos/key.png">
+				<input type="password" placeholder="Password" formControlName="password">
+			</div>
+		</div>
+		<div class="error" *ngIf="loginForm.controls.password.touched">
+			<p *ngIf="loginForm.controls.password.invalid">Invalid Password</p>
+		</div>
+		<div class="form-control" style="height: 35px;">
+			<div class="custom-control custom-checkbox">
+				<div class="flex">
+					<input type="checkbox" class="custom-control-input" id="customCheck1" formControlName="check">
+					<label class="custom-control-label" for="customCheck1" style="font-weight: 500; font-size: 13px;">Remember
+						me</label>
+				</div>
+				<a style="font-weight: 500;cursor: pointer;" (click)="recoverPassword()">Forgot password ?</a>
+			</div>
+		</div>
+		<button class="sign-btn" type="submit">Sign In</button>
+		<div class="footer">
+			<p>Or Login With</p>
+			<div class="footer-btn">
+				<button class="google" style="margin-right: 3px;" (click)="google()"><img
+						src="../../../../../assets/media/logos/google.png"></button>
+				<button class="linkedin" style="margin-left: 3px;"><img
+						src="../../../../../assets/media/logos/linkedin.png"></button>
+			</div>
+		</div>
+		<p>Don't have an account ? <a (click)="signUp()">Sign Up</a></p>
+	</form>
+</div>

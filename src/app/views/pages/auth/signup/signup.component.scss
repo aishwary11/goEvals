@@ -1,0 +1,261 @@
+$base-color:#f8f8f8;
+$font-color:#161c2d;
+$form-color:#fff;
+$warning:#e85969;
+$button-warning:#fd0e35;
+$border:#eaeaea;
+$disabled:#588da8;
+$light-font:#b8bfc6;
+$button-border:#535e6c;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	position: relative;
+	background-color: $base-color;
+	width: 100%;
+	height: 90vh;
+
+	form {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 900px;
+		box-shadow: 0.5px 1px #eaeaea;
+		padding: 30px;
+		background-color: $form-color;
+		border: 2px solid $border;
+		color: $font-color;
+		border-radius: 5px;
+
+		h1 {
+			text-align: center;
+			font-size: 25px;
+			font-weight: 700;
+			font-family: 'Roboto';
+		}
+
+		.flex {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+
+			.container {
+				width: calc(100% - 53%);
+
+
+				.form-control {
+					border: none;
+					margin-top: 20px;
+					height: 70px;
+
+					input {
+						border: none;
+
+						&::placeholder {
+							color: $light-font;
+							font-family: 'Poppins';
+						}
+					}
+
+					label {
+						font-weight: 500;
+						font-size: 14px;
+						font-family: 'Poppins';
+
+						span {
+							color: $warning;
+						}
+					}
+
+					.input-container {
+						height: 42px;
+						border: 1px solid $border;
+						border-radius: 5px;
+						width: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-top: 5px;
+
+						img {
+							width: 14px;
+						}
+
+						input {
+							width: 85%;
+							margin-left: 15px;
+							background-color: $form-color;
+
+							&:focus {
+								outline: none;
+							}
+						}
+					}
+
+					.mobile-container {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+
+						.select {
+							height: 42px;
+							border: 1px solid $border;
+							border-radius: 5px;
+							width: 18%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							margin-top: 5px;
+							position: relative;
+
+							select {
+								border: none;
+								outline: none;
+								appearance: none;
+								color: $light-font;
+							}
+
+							&::after {
+								content: url('../../../../../assets/media/logos/droper.png');
+								position: absolute;
+								right: 7px;
+								top: 10px;
+
+							}
+						}
+
+						.input-container-mobile {
+							height: 42px;
+							border: 1px solid $border;
+							border-radius: 5px;
+							width: 79%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							margin-top: 5px;
+
+							input {
+								outline: none;
+								width: 85%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.checkbox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 20px 0;
+
+			p {
+				margin-left: 8px;
+				font-size: 12px;
+				font-weight: 500;
+
+				span {
+					color: $warning;
+					font-weight: 700;
+				}
+			}
+		}
+
+
+
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+			margin-top: 20px;
+
+			.custom-control-input:checked~.custom-control-label {
+				&:before {
+					color: $form-color;
+					border-color: $button-warning;
+					background-color: $button-warning;
+				}
+			}
+
+			.custom-control-input:focus~.custom-control-label::before,
+			.form-control:focus {
+				box-shadow: none;
+				border-color: $border;
+			}
+
+			.custom-control-label {
+				cursor: pointer;
+				margin-left: 20px;
+
+				&:before,
+				&:after {
+					top: 3px;
+				}
+			}
+
+			.custom-switch .custom-control-label {
+				&:after {
+					top: 4px;
+				}
+			}
+
+			.sign-btn {
+				background-color: $button-warning;
+				width: 50%;
+				color: #fff;
+				border: none;
+				font-weight: 500;
+				border-radius: 6px;
+				padding: 10px 0;
+				box-shadow: 0.5px 1px #eaeaea;
+				font-size: 15px;
+				cursor: pointer;
+				margin: 20px 0;
+			}
+
+			.footer-btn {
+				margin: 15px 0;
+
+				button {
+					border: 1px solid $button-border;
+					padding: 8px 25px;
+					background-color: $form-color;
+					border-radius: 8px;
+				}
+			}
+
+			p {
+				font-weight: 500;
+
+				a {
+					font-weight: 900;
+					color: $button-warning;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.disabled {
+	background: $disabled !important;
+}
+
+.error {
+	color: red;
+
+	p {
+		text-align: left;
+	}
+}

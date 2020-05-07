@@ -1,0 +1,49 @@
+<kt-header></kt-header>
+<div class="wrapper">
+	<form [formGroup]="completeForm" (ngSubmit)="onComplete(completeForm)">
+		<h1>Complete your profile</h1>
+		<div class="form-control">
+			<label>Full Name<span style="font-weight: 900;color: #e85969;">*</span></label>
+			<div class="input-container">
+				<img src="../../../../../assets/media/logos/name.png">
+				<input type="text" placeholder="Name" formControlName="name">
+			</div>
+		</div>
+		<div class="form-control">
+			<label>Company Name<span style="font-weight: 900;color: #e85969;">*</span></label>
+			<div class="input-container">
+				<img src="../../../../../assets/media/logos/company.png">
+				<input type="text" placeholder="Company Name" formControlName="companyName">
+			</div>
+		</div>
+		<div class="form-control">
+			<label>Email Address<span style="font-weight: 900;color: #e85969;">*</span></label>
+			<div class="input-container">
+				<img src="../../../../../assets/media/logos/mail.png">
+				<input type="text" placeholder="Email Address" formControlName="email">
+			</div>
+		</div>
+		<div class="form-control">
+			<label>Mobile Number<span style="font-weight: 900;color: #e85969;">*</span></label>
+			<div class="mobile-container">
+				<div class="select">
+					<select formControlName="select">
+						<option value="" disabled>Code</option>
+					</select>
+				</div>
+				<div class="input-container-mobile">
+					<input type="email" placeholder="Mobile Number" formControlName="number">
+				</div>
+			</div>
+		</div>
+		<div class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" id="customCheck1">
+			<label class="custom-control-label" for="customCheck1">I
+				By continuing you agree to the <span>Terms of Service</span></label>
+		</div>
+		<button class="sign-btn" type="submit" [disabled]="completeForm.invalid">Submit</button>
+	</form>
+</div>
+
+
+<!-- [class.disabled="completeForm.invalid" -->
