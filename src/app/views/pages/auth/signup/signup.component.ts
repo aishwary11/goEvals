@@ -44,16 +44,16 @@ export class SignupComponent implements OnInit {
   google() {
     this.signupForm.reset()
     this.auth.signIn(GoogleLoginProvider.PROVIDER_ID).then(userData => {
-      this.googleData = userData.email
-      console.log(this.googleData)
-      this.recruiter.googleUser(userData).subscribe(userData => {
-        console.log('gmail user saved==>>', userData)
-        this.router.navigate(['/auth/completeprofile', userData])
-      },
-        err => {
-          console.log(err)
-          this.router.navigate(['/dashboard'])
-        })
+      // this.googleData = userData.email
+      // console.log(this.googleData)
+      // this.recruiter.googleUser(userData).subscribe(userData => {
+      //   console.log('gmail user saved==>>', userData)
+      //   this.router.navigate(['/auth/completeprofile', userData])
+      // },
+      //   err => {
+      //     console.log(err)
+      this.router.navigate(['/dashboard'])
+      // })
     })
   }
 
@@ -69,20 +69,21 @@ export class SignupComponent implements OnInit {
       check: this.signupForm.value.check,
     }
     console.log(this.signupForm)
-    if (this.signupForm.value.password != this.signupForm.value.confirmPassword) {
-      console.log('Password Doesnt Match')
-      return false
-    }
-    else {
-      this.recruiter.signUpUser(form).subscribe(result => {
-        if (result.status == 400) {
-          console.log('user exists')
-        } else {
-          console.log('heeellloooo', result)
-          this.router.navigate(['/auth/otp', result])
-        }
-      })
-    }
+    this.router.navigate(['/auth/otp'])
+    // if (this.signupForm.value.password != this.signupForm.value.confirmPassword) {
+    //   console.log('Password Doesnt Match')
+    //   return false
+    // }
+    // else {
+    //   this.recruiter.signUpUser(form).subscribe(result => {
+    //     if (result.status == 400) {
+    //       console.log('user exists')
+    //     } else {
+    //       console.log('heeellloooo', result)
+    //       this.router.navigate(['/auth/otp', result])
+    //     }
+    //   })
+    // }
   }
 
   signIn() {

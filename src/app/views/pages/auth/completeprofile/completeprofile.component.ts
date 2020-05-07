@@ -44,8 +44,9 @@ export class CompleteprofileComponent implements OnInit {
       check: this.completeForm.value.check
     }
     console.log(form)
-    this.recruiter.googleUser(form).subscribe(data => {
-      console.log(data)
-    })
+    this.router.navigate(['/auth/otp'])
+    // this.recruiter.googleUser(form).subscribe(data => {
+    //   console.log(data)
+    // })
   }
 }

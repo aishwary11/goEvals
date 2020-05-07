@@ -20,9 +20,9 @@ export class OnboardingComponent implements OnInit {
 
   onboardBuilder() {
     this.onboardForm = this.fb.group({
-      select1: ['', [Validators.required]],
-      select2: ['', [Validators.required]],
-      select3: ['', [Validators.required]],
+      select1: [''],
+      select2: [''],
+      select3: [''],
     })
   }
 

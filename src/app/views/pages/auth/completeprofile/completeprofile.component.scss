@@ -148,20 +148,6 @@ $light-font:#b8bfc6;
 			align-items: center;
 			font-size: 13px;
 
-			.checkbox {
-				position: relative;
-
-				input[type="checkbox"] {
-					position: absolute;
-					top: 3px;
-				}
-
-				label {
-					font-weight: 500;
-					margin-left: 20px;
-				}
-			}
-
 			p {
 				font-weight: 500;
 				margin: 0;
@@ -175,7 +161,7 @@ $light-font:#b8bfc6;
 			color: $form-color;
 			font-weight: 500;
 			border: none;
-			border-radius: 6px;
+			border-radius: 8px;
 			box-shadow: 0.5px 1px #eaeaea;
 			padding: 10px 0;
 			font-size: 15px;

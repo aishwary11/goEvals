@@ -27,9 +27,9 @@ export class RecoverPasswordComponent implements OnInit {
     form = {
       email: this.recoverForm1.value.email
     }
-    this.recruiter.resetPassword(form).subscribe(data => {
-      console.log(data.email)
+    // this.recruiter.resetPassword(form).subscribe(data => {
+    //   console.log(data.email)
       this.router.navigate(['/auth/recover-password-2'])
-    })
+    // })
   }
 }

@@ -31,12 +31,12 @@ export class Recoverpassword2Component implements OnInit {
       confirmPassword: this.recoverForm2.value.confirmPassword
     }
     console.log(form)
-    if (this.recoverForm2.value.password != this.recoverForm2.value.confirmPassword) {
-      console.log('Password Doesnt Match')
-      return false
-    } else {
-      console.log('successful')
+    // if (this.recoverForm2.value.password != this.recoverForm2.value.confirmPassword) {
+    //   console.log('Password Doesnt Match')
+    //   return false
+    // } else {
+    //   console.log('successful')
       this.router.navigate(['/auth/recover-password-3'])
-    }
+    // }
   }
 }

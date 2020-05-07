@@ -50,12 +50,12 @@ export class LoginComponent implements OnInit {
 	google() {
 		this.loginForm.reset()
 		this.auth.signIn(GoogleLoginProvider.PROVIDER_ID).then(userData => {
-			this.recruiter.googleUser(userData).subscribe(data => {
-				console.log('gmail user saved==>>', data)
-				setTimeout(() => {
-					this.router.navigate(['/auth/onboarding', data])
-				}, 2000)
-			})
+			// this.recruiter.googleUser(userData).subscribe(data => {
+			// console.log('gmail user saved==>>', data)
+			// setTimeout(() => {
+			this.router.navigate(['/auth/onboarding', userData])
+			// }, 2000)
+			// })
 		})
 	}
 
@@ -70,15 +70,15 @@ export class LoginComponent implements OnInit {
 			check: this.loginForm.value.check
 		}
 		console.log(form)
-		this.recruit.loginUser(form).subscribe(data => {
-			console.log(data)
-			if (data.status == 400) {
-				this.error = 'User not Found'
-			}
-			else {
-				this.router.navigate(['/auth/awesome'])
-			}
-		})
+		// this.recruit.loginUser(form).subscribe(data => {
+		// 	console.log(data)
+		// 	if (data.status == 400) {
+		// 		this.error = 'User not Found'
+		// 	}
+		// 	else {
+		this.router.navigate(['/auth/awesome'])
+		// 	}
+		// })
 	}
 
 	signUp() {
