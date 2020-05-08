@@ -37,6 +37,19 @@ import { HtmlClassService } from './html-class.service';
 import { HeaderMobileComponent } from './header/header-mobile/header-mobile.component';
 import { ErrorPageComponent } from './content/error-page/error-page.component';
 import { PermissionEffects, permissionsReducer, RoleEffects, rolesReducer } from '../../core/auth';
+import { AsideRightComponent } from './aside-right/aside-right.component';
+import { HelpComponent } from './aside-right/help/help.component';
+import { EmailTemplateComponent } from './aside-right/email-template/email-template.component';
+import { QuestionDatabankComponent } from './aside-right/question-databank/question-databank.component';
+import { PersonalInterviewComponent } from './aside-right/personal-interview/personal-interview.component';
+import { InvoiceComponent } from './aside-right/invoice/invoice.component';
+import { BillingComponent } from './aside-right/billing/billing.component';
+import { AddUser2Component } from './aside-right/add-user2/add-user2.component';
+import { AddUserComponent } from './aside-right/add-user/add-user.component';
+import { SettingsComponent } from './aside-right/settings/settings.component';
+import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
+import { InvoiceListComponent } from './aside-right/invoice/invoice-list/invoice-list.component';
+import { InvoiceDetailsComponent } from './aside-right/invoice/invoice-details/invoice-details.component';
 
 @NgModule({
 	declarations: [
@@ -61,6 +74,32 @@ import { PermissionEffects, permissionsReducer, RoleEffects, rolesReducer } from
 		MenuHorizontalComponent,
 
 		ErrorPageComponent,
+
+		AsideRightComponent,
+
+		HelpComponent,
+
+		EmailTemplateComponent,
+
+		QuestionDatabankComponent,
+
+		PersonalInterviewComponent,
+
+		InvoiceComponent,
+
+		BillingComponent,
+
+		AddUser2Component,
+
+		AddUserComponent,
+
+		SettingsComponent,
+
+		DashboardHeaderComponent,
+
+		InvoiceListComponent,
+
+		InvoiceDetailsComponent,
 	],
 	exports: [
 		BaseComponent,

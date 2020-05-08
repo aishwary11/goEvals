@@ -1,14 +1,23 @@
-:host {
-	.kt-aside {
-		height: 100%;
+$background:#ffffff;
 
-		.kt-aside-menu {
-			margin: 0;
-		}
-	}
-
-	// fixed text line break issue on minimized aside hover
-	.kt-menu__link-text {
-		white-space: nowrap;
-	}
+.side-nav {
+	width: 100%;
+	background-color: $background;
 }
+
+
+
+// :host {
+// 	.kt-aside {
+// 		height: 100%;
+
+// 		.kt-aside-menu {
+// 			margin: 0;
+// 		}
+// 	}
+
+// 	// fixed text line break issue on minimized aside hover
+// 	.kt-menu__link-text {
+// 		white-space: nowrap;
+// 	}
+// }

@@ -1,0 +1,53 @@
+$background:#ffffff;
+$button-background:#fff4f6;
+$button-border:#fd0e35;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	height: 8vh;
+	width: 100%;
+	background-color: $background;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.logo {
+		margin-left: 20px;
+
+		img {
+			width: 80%;
+		}
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 15px;
+
+		p {
+			margin: 0 10px 0 0;
+
+			span {
+				font-weight: 500;
+			}
+		}
+
+		.btn {
+			background-color: $button-background;
+			display: block;
+			font-weight: 500;
+			padding: 5px 10px;
+			border-radius: 5px;
+			border: 1px solid $button-border;
+			color: $button-border;
+			font-family: 'Poppins';
+
+		}
+	}
+}

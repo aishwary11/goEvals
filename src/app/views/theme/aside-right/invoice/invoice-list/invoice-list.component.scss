@@ -1,0 +1,95 @@
+$form-background:#ffffff;
+$title-color:#848484;
+$label-color:#2a2a2a;
+$heading-color:#fd0e35;
+$expired:#ffb822;
+$premium-color:#383838;
+$section-text:#555555;
+$font-color:#cacaca;
+$active :#1dc9b7;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 93%;
+
+	h1 {
+		font-size: 18px;
+		font-family: 'Roboto';
+		color: $heading-color;
+		margin-bottom: 25px;
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		form {
+			width: calc(100% - 68%);
+			background-color: $form-background;
+			border-radius: 5px;
+			padding: 15px;
+			font-family: 'Poppins';
+
+			.header-content {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				label {
+					color: $title-color;
+					font-size: 15px;
+				}
+
+				p {
+					color: $expired;
+				}
+			}
+
+			h1 {
+				color: $premium-color;
+				margin-top: 5px;
+				font-weight: 600;
+			}
+
+			.section {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				label {
+					color: $label-color;
+					font-size: 13px;
+					font-weight: 600;
+				}
+
+				p {
+					color: $font-color;
+					font-size: 13px;
+				}
+			}
+
+			.invoice-button {
+				margin-top: 25px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 25px auto 15px auto;
+				border: 1px solid $heading-color;
+				border-radius: 5px;
+				width: 100%;
+				background-color: $form-background;
+				font-weight: 700;
+				padding: 8px 0;
+				font-size: 13px;
+				color: $heading-color;
+			}
+		}
+	}
+}

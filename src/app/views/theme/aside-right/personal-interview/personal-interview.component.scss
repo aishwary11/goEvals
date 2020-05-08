@@ -1,0 +1,51 @@
+$backgorund-color:#ffffff;
+$header-font:#fd0e35;
+$font-color:#232323;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 90%;
+
+	h1 {
+		color: $header-font;
+		font-size: 18px;
+		font-family: 'Roboto';
+		margin-bottom: 20px;
+	}
+
+	.flex {
+		width: 100%;
+		margin-bottom: 20px;
+
+		.container {
+			background-color: $backgorund-color;
+			width: calc(100% - 70%);
+			height: 350px;
+			font-family: 'Poppins';
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: relative;
+
+			a {
+				position: absolute;
+				top: 15px;
+				right: 15px;
+			}
+
+			p {
+				color: $font-color;
+				position: absolute;
+				bottom: 60px;
+				font-size: 13px;
+				font-weight: 600;
+			}
+		}
+	}
+}
