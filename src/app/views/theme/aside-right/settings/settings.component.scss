@@ -1,0 +1,141 @@
+$form-background:#ffffff;
+$warning-color:#fd0e35;
+$background-color:#f3f3f6;
+$border-color:#dee2e6;
+$label-color:#d3d3d3;
+$font-color:#6d6d6d;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	width: 100%;
+}
+
+button {
+	display: block;
+	border-radius: 5px;
+}
+
+.wrapper {
+	width: 85%;
+
+	h1 {
+		color: $warning-color;
+		font-size: 18px;
+		font-family: 'Roboto';
+	}
+
+	.change-button {
+		border: 1px solid $warning-color;
+		padding: 10px;
+		color: $warning-color;
+		background-color: $background-color;
+		font-weight: 500;
+		font-family: 'Poppins';
+	}
+
+	.cancel {
+		padding: 10px 20px;
+		margin-left: 10px;
+	}
+
+	.save {
+		background-color: $warning-color;
+		color: $background-color;
+		border: none;
+		padding: 10px 20px;
+		font-weight: 500;
+		font-family: 'Poppins';
+	}
+
+	.flex-1 {
+		display: flex;
+	}
+
+	form {
+		background-color: $form-background;
+		width: 100%;
+		font-family: 'Poppins';
+		border-radius: 5px;
+
+		.container {
+			padding: 30px;
+		}
+
+		label {
+			width: 25%;
+			color: $label-color;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid $border-color;
+			padding: 10px 15px;
+			outline: none;
+			color: $font-color;
+			font-size: 13px;
+		}
+
+		textarea {
+			height: 80px;
+			resize: none;
+		}
+
+		input[type="file"] {
+			display: none;
+		}
+
+		select {
+			border-radius: 5px;
+			border: 1px solid $border-color;
+			padding: 10px 15px;
+			outline: none;
+			color: $font-color;
+			font-size: 13px;
+			appearance: none;
+			width: 100%;
+		}
+
+		.file-btn {
+			padding: 10px 25px;
+			border: 1px solid $border-color;
+			font-size: 13px;
+			font-weight: 500;
+			color: $font-color;
+			background-color: $form-background;
+		}
+
+		.select {
+			width: 100%;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				content: url('../../../../../assets/media/logos/drop-down.png');
+			}
+		}
+
+		.select-1 {
+			width: 10%;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				content: url('../../../../../assets/media/logos/droper.png');
+			}
+		}
+	}
+}

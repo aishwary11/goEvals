@@ -26,6 +26,7 @@ $heading-color:#fd0e35;
 		background-color: $form-background;
 		border-radius: 5px;
 		padding: 25px 30px 45px 30px;
+		font-family: 'Poppins';
 
 		.Content {
 			display: flex;
@@ -50,8 +51,6 @@ $heading-color:#fd0e35;
 				outline: none;
 				color: $input-color;
 				font-size: 13px;
-				font-family: 'Poppins';
-
 
 				&::placeholder {
 					color: $title-color;
@@ -59,7 +58,7 @@ $heading-color:#fd0e35;
 			}
 
 			textarea {
-				height: 80px;
+				height: 85px;
 				resize: none;
 			}
 		}

@@ -17,7 +17,8 @@ const routes: Routes = [
 		children: [
 			{
 				path: 'dashboard',
-				loadChildren: () => import('app/views/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
+				// loadChildren: () => import('app/views/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
+				component: BaseComponent
 			},
 			{
 				path: 'mail',

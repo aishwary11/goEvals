@@ -1,24 +1,44 @@
-<div class="side-nav">
-	<div class="dashboard"><label>dashboard</label></div>
-	<label>your details</label>
-	<div class="menu">
-		<ul>
-			<li><a href="">Settings</a>
-				<ul>
-					<li><a href="">My Profile</a></li>
-					<li><a href="">Users</a></li>
-					<li><a href="">Billing</a></li>
-					<li><a href="">Subscription</a></li>
-					<li><a href="">Resources</a>
-						<ul>
-							<li><a href="">Personal Interview</a></li>
-							<li><a href="">Question Databank</a></li>
-							<li><a href="">Recruitment email</a></li>
-							<li><a href="">Help</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
+<!-- <div class="wrapper">
+	<div class="logo"><img src="../../../../assets/media/logos/logo.png"></div>
+	<div class="flex">
+		<p>Hi, <span>abc</span></p>
+		<button class="btn">Sign Out</button>
 	</div>
 </div>
+<div class="main">
+	<div class="main-left"> -->
+		<div class="side-nav">
+			<div class="dashboard">
+				<label><span class="header"><img src="../../../../assets/media/logos/dashboard.png"></span>Dashboard</label>
+			</div>
+			<div class="menu">
+				<label>YOUR DETAILS</label>
+				<ul>
+					<li><span class="header"><img src="../../../../assets/media/logos/setting_logo.png"></span><a>Settings</a>
+						<ul>
+							<li><span class="left"><img src="../../../../assets/media/logos/dash.png"></span><a routerLink='/dashboard/add-user'>My Profile</a></li>
+							<li><span class="left"><img src="../../../../assets/media/logos/dash.png"></span><a routerLink='/dashboard/add-user'>Users</a></li>
+							<li><span class="left"><img src="../../../../assets/media/logos/dash.png"></span><a routerLink='/dashboard/billing'>Billing</a></li>
+							<li><span class="left"><img src="../../../../assets/media/logos/dash.png"></span><a routerLink='/dashboard/invoice-list'>Subscription</a></li>
+							<li><span class="resoucres"><img src="../../../../assets/media/logos/dash.png"></span><a routerLink='/dashboard/add-user'>Resources</a>
+								<ul>
+									<li style="margin-left: 15px;"><span class="left"><img src="../../../../assets/media/logos/dot.png"></span><a routerLink='/dashboard/add-user'>Personal Interview</a></li>
+									<li style="margin-left: 15px;"><span class="left"><img src="../../../../assets/media/logos/dot.png"></span><a routerLink='/dashboard/add-user'>Question Databank</a></li>
+									<li style="margin-left: 15px;"><span class="left"><img src="../../../../assets/media/logos/dot.png"></span><a routerLink='/dashboard/add-user'>Recruitment email</a></li>
+								</ul>
+							</li>
+							<li><span class="left"><img src="../../../../assets/media/logos/dash.png"></span><a routerLink='/dashboard/help'>Help</a></li>
+						</ul>
+					</li>
+					<label>Tests Component</label>
+					<li><span class="header"><img src="../../../../assets/media/logos/create-test.png"></span><a>Create Test</a></li>
+					<li><span class="header"><img src="../../../../assets/media/logos/view-test.png"></span><a>View Tests</a></li>
+					<li><span class="header"><img src="../../../../assets/media/logos/result.png"></span><a>Results</a></li>
+				</ul>
+			</div>
+		</div>
+	<!-- </div>
+	<div class="main-right">
+		<router-outlet></router-outlet>
+	</div>
+</div> -->

@@ -1,0 +1,137 @@
+$background-color:#ffffff;
+$button-color:#fd0e35;
+$label-color:#5d5c5c;
+$input-border:#dee2e6;
+$placeholder:#c9c9c9;
+$input-border:#dee2e6;
+$button-background:#f3f3f6;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 92%;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+
+		h1 {
+			color: $button-color;
+			font-size: 18px;
+			font-family: 'Roboto';
+		}
+
+		.back {
+			border: 1px solid $button-color;
+			padding: 10px 50px;
+			background-color: $button-background;
+			color: $button-color;
+			border-radius: 5px;
+			font-weight: 500;
+		}
+	}
+
+	form {
+		background-color: $background-color;
+		border-radius: 5px;
+		font-family: 'Poppins';
+
+		.container {
+			padding: 30px;
+			width: 100%;
+
+			.flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				padding-right: 10%;
+				margin-top: 10px;
+
+				label {
+					color: $label-color;
+					width: 20%;
+					font-weight: 500;
+				}
+
+				input {
+					border: 1px solid $input-border;
+					padding: 10px 15px;
+					width: 90%;
+					border-radius: 5px;
+
+					&::placeholder {
+						color: $placeholder;
+					}
+				}
+
+				.number {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+
+					.select {
+						position: relative;
+						margin-left: 14px;
+						width: calc(100% - 90%);
+
+						&::after {
+							position: absolute;
+							content: url('../../../../../assets/media/logos/droper.png');
+							top: 10px;
+							right: 10px;
+						}
+					}
+
+					input {
+						margin-left: 18px;
+					}
+				}
+
+				select {
+					border: 1px solid $input-border;
+					padding: 10px 15px;
+					width: 100%;
+					border-radius: 5px;
+					appearance: none;
+					color: $placeholder;
+					outline: none;
+				}
+
+				.role-select {
+					position: relative;
+					width: 100%;
+					margin-left: 14px;
+
+					&::after {
+						position: absolute;
+						content: url('../../../../../assets/media/logos/drop-down.png');
+						top: 12px;
+						right: 15px;
+					}
+				}
+			}
+		}
+
+		.btn {
+			padding: 30px 0 30px 30px;
+
+			button {
+				padding: 10px 50px;
+				background-color: $button-color;
+				color: $background-color;
+				border-radius: 5px;
+				display: block;
+				outline: none;
+				border: none;
+			}
+		}
+	}
+}

@@ -9,7 +9,7 @@ $font-color:#232323;
 }
 
 .wrapper {
-	width: 90%;
+	width: 92%;
 
 	h1 {
 		color: $header-font;
@@ -20,11 +20,13 @@ $font-color:#232323;
 
 	.flex {
 		width: 100%;
-		margin-bottom: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
 		.container {
 			background-color: $backgorund-color;
-			width: calc(100% - 70%);
+			width: calc(100% - 68%);
 			height: 350px;
 			font-family: 'Poppins';
 			display: flex;
@@ -36,7 +38,8 @@ $font-color:#232323;
 			a {
 				position: absolute;
 				top: 15px;
-				right: 15px;
+        right: 15px;
+        cursor: pointer;
 			}
 
 			p {

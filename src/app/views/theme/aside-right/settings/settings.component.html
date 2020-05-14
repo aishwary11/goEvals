@@ -1,1 +1,74 @@
-<p>settings works!</p>
+<div class="wrapper">
+	<div class="flex" style="margin-bottom: 20px;margin-top: 0;">
+		<h1>MY PROFILE</h1>
+		<button class="change-button">Change Password</button>
+	</div>
+	<form>
+		<div class="container">
+			<div class="flex">
+				<label>Full Name</label>
+				<input type="text">
+			</div>
+			<div class="flex">
+				<label>Company Name</label>
+				<input type="text">
+			</div>
+			<div class="flex">
+				<label>Company Profile</label>
+				<textarea></textarea>
+			</div>
+			<div class="flex">
+				<label>Company Logo</label>
+				<div class="flex" style="margin-top: 0;">
+					<input type="text" style="margin-right: 15px;">
+					<input type="file" #file>
+					<button (click)="file.click()" class="file-btn">Browse</button>
+				</div>
+			</div>
+			<div class="flex">
+				<label>Company Address</label>
+				<textarea></textarea>
+			</div>
+			<div class="flex">
+				<label>Phone Number</label>
+				<div class="flex" style="margin-top: 0;">
+					<div class="select-1">
+						<select>
+							<option value=""></option>
+						</select>
+					</div>
+					<input type="text" style="margin-left: 15px;">
+				</div>
+			</div>
+			<div class="flex">
+				<label>What industry are you in</label>
+				<div class="select">
+					<select>
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+			<div class="flex">
+				<label>I typically hire for</label>
+				<div class="select">
+					<select>
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+			<div class="flex">
+				<label>I am a</label>
+				<div class="select">
+					<select>
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container flex-1">
+			<button class="save">Save</button>
+			<button class="change-button cancel">Cancel</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,98 @@
+$table-header:#f3f3f3;
+$form-background:#ffffff;
+$edit-button:#ceebfd;
+$delete-button:#fdcece;
+$add-button:#fd0e35;
+$table-strip:#f3f3f3;
+$font-color:#575962;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 90%;
+
+	h1 {
+		color: $add-button;
+		font-size: 18px;
+		font-family: 'Roboto';
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		.btn {
+			background-color: $add-button;
+			color: $form-background;
+			padding: 10px 25px;
+			border: none;
+			display: block;
+			border-radius: 5px;
+			font-family: 'Poppins';
+		}
+	}
+
+	form {
+		background-color: $form-background;
+		height: 500px;
+		border-radius: 5px;
+		padding: 50px 25px;
+		color: $font-color;
+
+		table {
+			width: 100%;
+			text-align: center;
+			font-size: 14px;
+
+			tr {
+				width: 100%;
+
+				th {
+					width: calc(100% - 80%);
+					padding: 12px 0;
+					font-weight: 600;
+				}
+
+				td {
+					padding: 12px 0;
+
+					a {
+						cursor: pointer;
+
+						img {
+							width: 22px;
+						}
+					}
+
+					.content-back {
+						padding: 5px 10px;
+						background-color: #20c99a;
+						color: $form-background;
+						border-radius: 3px;
+					}
+				}
+
+				&:nth-child(odd) {
+					background-color: #f3f3f3;
+				}
+			}
+
+			.flex-1 {
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+
+				span {
+					img {
+						width: 20px;
+					}
+				}
+			}
+		}
+	}
+}

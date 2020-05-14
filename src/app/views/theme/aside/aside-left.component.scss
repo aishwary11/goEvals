@@ -1,23 +1,122 @@
 $background:#ffffff;
+$font-color:#555555;
+$active:#f4f4f4;
+$button-background:#fff4f6;
+$button-border:#fd0e35;
+
+.wrapper {
+	height: 8vh;
+	width: 100%;
+	background-color: $background;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.logo {
+		margin-left: 20px;
+
+		img {
+			width: 80%;
+		}
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 15px;
+
+		p {
+			margin: 0 10px 0 0;
+
+			span {
+				font-weight: 600;
+			}
+		}
+
+		.btn {
+			background-color: $button-background;
+			display: block;
+			font-weight: 500;
+			padding: 5px 10px;
+			border-radius: 5px;
+			border: 1px solid $button-border;
+			color: $button-border;
+			font-family: 'Poppins';
+
+		}
+	}
+}
 
 .side-nav {
 	width: 100%;
 	background-color: $background;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 20px;
+	font-family: 'poppins';
+
+	ul {
+		li {
+			list-style: none;
+			margin-top: 20px;
+
+			a {
+				color: $font-color;
+			}
+		}
+	}
+
+	.menu {
+		label {
+			margin-top: 30px;
+		}
+	}
+
+	.dashboard {
+		margin: 20px 80px 0px 0px;
+	}
+
+	.header,
+	.resoucres {
+		img {
+			margin-right: 15px;
+		}
+	}
+
+	.left {
+		margin-right: 25px;
+	}
+
+	.header {
+		width: 100%;
+		position: relative;
+
+		img {
+			width: 18px;
+		}
+
+		&::after {
+			position: absolute;
+			top: 0px;
+			left: 175px;
+			content: url('../../../../assets/media/logos/down-arrow.png');
+		}
+	}
+
+	.resoucres {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			top: 0px;
+			left: 175px;
+			content: url('../../../../assets/media/logos/down-arrow.png');
+		}
+	}
 }
 
-
-
-// :host {
-// 	.kt-aside {
-// 		height: 100%;
-
-// 		.kt-aside-menu {
-// 			margin: 0;
-// 		}
-// 	}
-
-// 	// fixed text line break issue on minimized aside hover
-// 	.kt-menu__link-text {
-// 		white-space: nowrap;
-// 	}
-// }
+.active {
+	background-color: $font-color;
+}

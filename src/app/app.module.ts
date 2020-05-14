@@ -63,7 +63,10 @@ import * as typescript from 'highlight.js/lib/languages/typescript'
 import * as scss from 'highlight.js/lib/languages/scss'
 import * as xml from 'highlight.js/lib/languages/xml'
 import * as json from 'highlight.js/lib/languages/json'
-import { RecruitersService } from '../app/core/services/recruiters.service'
+import { RecruitersService } from '../app/core/services/recruiters.service';
+import { AsideRightRoutingModule } from './views/theme/aside-right/aside-right-routing.module';
+import { BaseRoutingModule } from './views/theme/base/base-routing.module';
+import { AsideLeftRoutingModule } from './views/theme/aside/aside-left-routing.module'
 // tslint:disable-next-line:class-name
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	wheelSpeed: 0.5,
@@ -129,7 +132,10 @@ export function getAuthServiceConfigs() {
 		TranslateModule.forRoot(),
 		MatProgressSpinnerModule,
 		InlineSVGModule.forRoot(),
-		ThemeModule
+		ThemeModule,
+		AsideRightRoutingModule,
+		BaseRoutingModule,
+		AsideLeftRoutingModule
 	],
 	exports: [],
 	providers: [

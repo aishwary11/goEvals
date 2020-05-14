@@ -1,0 +1,151 @@
+$form-background:#ffffff;
+$warning-color:#fd0e35;
+$select-background:#e7e7e7;
+$textarea-border:#dbdbdb;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 90%;
+
+	h1 {
+		color: $warning-color;
+		font-size: 18px;
+		font-weight: 500;
+		font-family: 'Roboto';
+	}
+
+	form {
+		margin-top: 20px;
+		background-color: $form-background;
+		border-radius: 5px;
+		padding: 30px;
+		width: 100%;
+		font-family: 'Poppins';
+
+		.accordion {
+			width: 100%;
+		}
+
+		.toggle {
+			display: none;
+		}
+
+		.option {
+			position: relative;
+			margin-bottom: 1em;
+		}
+
+		.title,
+		.content {
+			backface-visibility: hidden;
+			transform: translateZ(0);
+			transition: all 0.2s;
+		}
+
+		.title {
+			background: $select-background;
+			padding: 1em;
+			display: block;
+			font-weight: 500;
+			color: #6f6f6f;
+		}
+
+		.title:after,
+		.title:before {
+			content: '';
+			position: absolute;
+			right: 1.25em;
+			top: 1.25em;
+			width: 2px;
+			height: 0.75em;
+			background-color: #787878;
+			transition: all 0.2s;
+		}
+
+		.title:after {
+			transform: rotate(90deg);
+			background-color: #5d5c5c;
+		}
+
+		.content {
+			max-height: 0;
+			overflow: hidden;
+			background-color: #fff;
+
+			p {
+				margin: 0;
+				padding: 0.5em 1em 1em;
+				font-size: 1em;
+				font-weight: 400;
+			}
+		}
+
+		.toggle:checked {
+			&+.title {
+				color: #ef667d;
+			}
+
+			&+.title,
+			&+.title+.content {
+				border: 1px solid #e7e7e7;
+			}
+
+			&+.title+.content {
+				max-height: 500px;
+				color: #606060;
+			}
+
+			&+.title:before {
+				transform: rotate(90deg) !important;
+			}
+		}
+
+		.select {
+			position: relative;
+			width: 100%;
+			background-color: $select-background;
+			font-size: 12px;
+			color: #5d5c5c;
+			padding: 15px 20px;
+
+			select {
+				border: none;
+				appearance: none;
+				background-color: $select-background;
+
+			}
+
+			&::after {
+				position: absolute;
+				top: 18px;
+				right: 15px;
+				content: url('../../../../../assets/media/logos/drop-down.png');
+			}
+		}
+
+		textarea {
+			border: 1px solid $textarea-border;
+			width: 100%;
+			resize: none;
+			height: 150px;
+			padding: 15px;
+			margin-top: 20px;
+		}
+
+		.submit {
+			display: block;
+			padding: 10px 20px;
+			font-weight: 500;
+			background-color: $warning-color;
+			color: $form-background;
+			border: none;
+			border-radius: 5px;
+			margin-top: 20px;
+		}
+	}
+}
